@@ -13,8 +13,10 @@ public class SpringIocXmlBasedApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringIocXmlBasedApplication.class, args);
 		
-		context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Employee employee = (Employee)context.getBean("manager");
+		//applicationContextAnnotation.xml
+		//applicationContextAnnotation.xml
+		context = new ClassPathXmlApplicationContext("applicationContextAnnotation.xml");
+		com.core.xml.annotation.depenency.Employee employee = (com.core.xml.annotation.depenency.Employee)context.getBean("manager");
 		employee.doWork();
 		
 		
